@@ -1,4 +1,4 @@
--- Question 1: What is the total revenue for each product category?
+-- Question 1: Which color generated the highest revenue each year?
 WITH revenue_cte AS (
     SELECT
         EXTRACT(YEAR FROM orderdate) AS year,
@@ -19,7 +19,7 @@ FROM (
 WHERE rnk = 1;
 
 
--- Question 2: What is the average lead time for each product category?
+-- Question 2: What is the average LeadTimeInBusinessDays by ProductCategoryName?
 
 SELECT
     p.productcategoryname,
